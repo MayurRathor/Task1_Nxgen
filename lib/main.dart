@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'Widgets.dart/BotomSheet.dart';
+import 'Screens.dart/MyOrder/MyOrder.dart';
+import 'Screens.dart/OrderDetails/OrderDetails.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,11 +14,26 @@ class MyApp extends StatelessWidget {
           title: Text("Tara App Design"),
         ),
         body: Center(
-          child: RaisedButton(
-            child: Text("BottomSheet"),
-            onPressed: () {
-              Get.bottomSheet(MyBootomSheet());
-            },
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              RaisedButton(
+                child: Text("OrderDetails"),
+                onPressed: () {
+                  Get.bottomSheet(
+                    OrderDetails(),
+                  );
+                },
+              ),
+              RaisedButton(
+                child: Text("MyOrder"),
+                onPressed: () {
+                  Get.bottomSheet(
+                    MyOrder(),
+                  );
+                },
+              ),
+            ],
           ),
         ),
       ),

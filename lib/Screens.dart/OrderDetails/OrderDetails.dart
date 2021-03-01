@@ -4,7 +4,7 @@ import 'Header.dart';
 import 'ItemDetails.dart';
 import 'TotalPrice.dart';
 
-class MyBootomSheet extends StatelessWidget {
+class OrderDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,11 +14,11 @@ class MyBootomSheet extends StatelessWidget {
             Header(),
             Address(),
             SizedBox(
-              height: 7,
+              height: 3,
             ),
             Items(),
             SizedBox(
-              height: 7,
+              height: 3,
             ),
             TotalPrice(),
           ],
