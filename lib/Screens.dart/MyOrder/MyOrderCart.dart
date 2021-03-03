@@ -8,25 +8,32 @@ class Test extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 6),
-              width: 53,
-              height: 4,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(4)),
-                  color: MyColors.grey2),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 24, bottom: 16, left: 16),
-              alignment: Alignment.bottomLeft,
-              child: Text("My Order", style: MyTextStyles.headline6222),
-            ),
-            Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+          color: MyColors.elevation_off_2_2_2),
+      child: Column(
+        children: [
+          //Top Handel
+          Container(
+            margin: EdgeInsets.only(top: 6),
+            width: 53,
+            height: 4,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(4)),
+                color: MyColors.grey2),
+          ),
+          // My Order text
+          Container(
+            margin: EdgeInsets.only(top: 24, bottom: 16, left: 16),
+            alignment: Alignment.bottomLeft,
+            child: Text("My Order", style: MyTextStyles.headline6222),
+          ),
+          //Item ListView
+          Container(
+            child: Expanded(
               child: ListView.builder(
                 shrinkWrap: true,
-                itemCount: 5,
+                itemCount: 15,
                 itemBuilder: (BuildContext context, index) {
                   return Column(children: [
                     ListTile(
@@ -48,22 +55,9 @@ class Test extends StatelessWidget {
                 },
               ),
             ),
-          ],
-        ),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(8)),
-            boxShadow: [
-              BoxShadow(
-                  color: const Color(0x1f000000),
-                  offset: Offset(0, 4),
-                  blurRadius: 6,
-                  spreadRadius: 0),
-              BoxShadow(
-                  color: const Color(0x14000000),
-                  offset: Offset(0, 0),
-                  blurRadius: 2,
-                  spreadRadius: 0)
-            ],
-            color: MyColors.elevation_off_2_2_2));
+          ),
+        ],
+      ),
+    );
   }
 }
