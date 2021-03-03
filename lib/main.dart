@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'Screens.dart/MyOrder/MyOrder.dart';
+import 'Screens.dart/MyOrder/MyOrderCart.dart';
 import 'Screens.dart/OrderDetails/OrderDetails.dart';
+import 'Screens.dart/OrderDetails/OrderDetailsCart.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
                 child: Text("OrderDetails"),
                 onPressed: () {
                   Get.bottomSheet(
-                    OrderDetails(),
+                    OrderDetailsCart(),
                   );
                 },
               ),
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
                 child: Text("MyOrder"),
                 onPressed: () {
                   Get.bottomSheet(
-                    MyOrder(),
+                    Test(),
                   );
                 },
               ),
